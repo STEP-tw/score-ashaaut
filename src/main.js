@@ -7,8 +7,8 @@ let numberOfCols = 120;
 let animator = undefined;
 
 const updateScore = function() {
-  let score = document.getElementById("score").innerText++;
-  return score;
+  let score = document.getElementById("score");
+  return score.innerText=game.updateScore();
 }
 
 const animateSnake = function() {
@@ -73,7 +73,6 @@ const startGame = function() {
   drawSnake(game.getSnake());
   game.createFood();
   drawFood(game.getFood());
-
   addKeyListener();
   animator = setInterval(animateSnake, 140);
 }
