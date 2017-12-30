@@ -5,7 +5,10 @@ let numberOfCols = 120;
 
 let animator = undefined;
 
-
+const updateScore = function() {
+  let scoreBox = document.getElementById("score").innerText++;
+  return scoreBox;
+}
 
 const animateSnake = function() {
   let oldHead = snake.getHead();
@@ -67,9 +70,6 @@ const startGame = function() {
   addKeyListener();
   animator = setInterval(animateSnake, 140);
 }
-const updateScore = function() {
-  let scoreBox = document.getElementById("score").innerText++;
-  return scoreBox;
-}
+
 
 window.onload = startGame;
