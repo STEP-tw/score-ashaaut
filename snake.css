@@ -12,6 +12,9 @@
   height: 8px;
 }
 
+#scoreBox{
+  margin-left: 500px;
+}
 .snake {
   background-color: black;
 }
