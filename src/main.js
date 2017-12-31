@@ -6,7 +6,7 @@ let numberOfCols = 120;
 
 let animator = undefined;
 
-const updateScore = function() {
+const displayScore = function() {
   let score = document.getElementById("score");
   return score.innerText=game.updateScore();
 }
@@ -17,7 +17,7 @@ const animateSnake = function() {
   unpaintSnake(details.oldTail);
   paintHead(details.head);
   if (game.hasSnakeEatenFood()) {
-    updateScore();
+    displayScore();
     game.grow();
     game.createFood();
     drawFood(game.getFood());
